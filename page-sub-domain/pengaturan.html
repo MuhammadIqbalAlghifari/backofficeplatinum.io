@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css"  rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="../src/file-input.css">
+</head>
+<body style="background-color: #f8f8f8;">
+
+    <!-- Start Sidebar -->
+
+    <section class="Sidebar " >
+
+        <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-black rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            <span class="sr-only">Open sidebar</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+            </svg>
+         </button>
+
+         <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 h-screen w-56 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+            
+            <div class="h-full px-3 py-4 overflow-y-auto" style="background-color: black;">
+                <a href="https://flowbite.com/" class="flex items-center justify-center pl-2.5 mb-5">
+                    <img src="../img/PLATINUM LOGOS.png" class="h-6 mr-3 sm:h-7" alt="Flowbite Logo" />
+                 </a>
+                 <a href="https://flowbite.com/" class="flex items-center justify-center pl-2.5 mb-5">
+                    <span class="self-center text-xl font-semibold whitespace-nowrap text-white">Back Office</span>
+                 </a>
+           
+                <ul class="space-y-2 font-light">
+
+                    <li>
+                        <a href="./backoffice-dashboard.html" class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-white dark:hover:bg-gray-700 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-6 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black">
+                                <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                                <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                            </svg>
+                            <span class="ml-3 text-black transition duration-75  dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black">Home</span>
+                        </a>
+                    </li>
+
+                    
+               </li>
+               <li>
+
+                <li>
+
+                    <button type="button" class="flex items-center w-full p-2 text-base text-white rounded-lg dark:text-white hover:bg-white dark:hover:bg-gray-700 group" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                        <svg class="flex-shrink-0 w-5 h-5 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
+                            <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"/>
+                        </svg>
+                        <span class="flex-1 ml-3 text-left whitespace-nowrap text-black transition duration-75  dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black">Dashboard</span>
+                        <svg class="w-3 h-3 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                        <ul id="dropdown-example" class="hidden py-2 space-y-2 text-white">
+                            <li>
+                                <button id="multiLevelDropdownButton" data-dropdown-toggle="dropdown" class="flex ml-4 text-white bg-transparent focus:outline-none focus:ring-blue-300 font-light rounded-lg text-sm px-5 py-2.5 text-center justify-center items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                        <path fill-rule="evenodd" d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zM12.75 12a.75.75 0 00-1.5 0v2.25H9a.75.75 0 000 1.5h2.25V18a.75.75 0 001.5 0v-2.25H15a.75.75 0 000-1.5h-2.25V12z" clip-rule="evenodd" />
+                                        <path d="M14.25 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0016.5 7.5h-1.875a.375.375 0 01-.375-.375V5.25z" />
+                                      </svg>                                      
+                                    <span class="ml-2">Post</span>
+                                    <svg class="w-2.5 h-2.5 ml-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                </button>
+                                <!-- Dropdown menu -->
+                                <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-52 dark:bg-gray-700">
+                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="multiLevelDropdownButton">
+                                        <li>
+                                            
+                                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
+                                                    <li>
+                                                        <a href="./tambahkan-postingan.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tambahkan Postingan Baru</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tampilkan Postingan</a>
+                                                    </li>
+                                                </ul>
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                    <button id="multiLevelDropdownButtonPages" data-dropdown-toggle="dropdownPages" class="text-white ml-4 bg-transparent focus:outline-none focus:ring-blue-300 font-light rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                            <path fill-rule="evenodd" d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm18 3H3.75v9a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V9zm-15-3.75A.75.75 0 004.5 6v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V6a.75.75 0 00-.75-.75H5.25zm1.5.75a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H7.5a.75.75 0 01-.75-.75V6zm3-.75A.75.75 0 009 6v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V6a.75.75 0 00-.75-.75H9.75z" clip-rule="evenodd" />
+                                        </svg>
+                                        <span class="ml-2">Pages</span>
+                                        <svg class="w-2.5 h-2.5 ml-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                        </svg>
+                                    </button>
+                                    <!-- Dropdown menu -->
+                                    <div id="dropdownPages" class="z-10  hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="multiLevelDropdownButtonPages">
+                                            <li>
+                                                
+                                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="multiLevelDropdownButtonPages">
+                                                            <li>
+                                                                <a href="./home-edit.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Home</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./produk.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Produk</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./blog-edit.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Blog</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./garansi-edit.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Garansi</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./kontak.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kontak</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./artikel.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Artikel</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./verifikasi-produk.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Verifikasi Produk</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./tolak-produk.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tolak Produk</a>
+                                                            </li>
+                                                    </ul>
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                            </li>
+
+                            <li>
+                                <button id="profil" data-dropdown-toggle="profilData" class="ml-4 text-white bg-transparent focus:outline-none focus:ring-blue-300 font-light rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                                    <svg class="w-5 h-5 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                        <path d="M16 0H4a2 2 0 0 0-2 2v1H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4.5a3 3 0 1 1 0 6 3 3 0 0 1 0-6ZM13.929 17H7.071a.5.5 0 0 1-.5-.5 3.935 3.935 0 1 1 7.858 0 .5.5 0 0 1-.5.5Z"/>
+                                      </svg>                                      
+                                    <span class="ml-2">Profil</span>
+                                    <svg class="w-2.5 h-2.5 ml-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                </button>
+                                <!-- Dropdown menu -->
+                                <div id="profilData" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-48 dark:bg-gray-700">
+                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="profil">
+                                        <li>
+                                            
+                                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="profil">
+                                                    <li>
+                                                        <a href="./tambah-data-pengguna.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tambah Data Pengguna</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="./daftar-data-pengguna.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Daftar Data Pengguna</a>
+                                                    </li>
+                                                </ul>
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>               
+                </ul>
+                <ul class="pt-4 mt-4 space-y-2 font-light border-t border-gray-200 dark:border-gray-700">
+                    <li>
+                       <a href="./pengaturan.html" class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-white dark:hover:bg-gray-700 group">
+                        <svg class="w-5 h-5 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"/>
+                          </svg>
+                          <span class="ml-3 text-black transition duration-75  dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black">Pengaturan</span>
+                       </a>
+                    </li>
+                    <li>
+                        <a href="../index.html" class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-white dark:hover:bg-gray-700 group">
+                            <svg class="w-5 h-5 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3"/>
+                              </svg>
+                           <span class="ml-3 text-black transition duration-75  dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black">Log out</span>
+                        </a>
+                     </li>
+                 </ul>
+
+                    
+            </div>
+        </aside>
+    </section>
+
+    <!-- End Sidebar -->
+
+    <main>
+        <div class="sm:ml-64 mx-auto max-w-screen-2xl p-8 md:p-6 2xl:p-10 mb-5">
+          <div class="p-4 mx-auto max-w-270">
+            <!-- Breadcrumb Start -->
+            <div
+              class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
+            >
+              <h2 class="text-title-md2 font-bold text-black dark:text-white">
+                Pengaturan
+              </h2>
+
+            </div>
+            <!-- Breadcrumb End -->
+
+            <!-- ====== Settings Section Start -->
+            <div class="grid grid-cols-1 gap-8">
+              <div class="col-span-5 xl:col-span-3">
+                <div
+                  class=" px-4 rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark"
+                >
+                  <div
+                    class="border-b border-stroke py-4 px-4 dark:border-strokedark"
+                  >
+                    <h3 class="font-medium text-black dark:text-white">
+                      Informasi Pribadi / Perusahaan
+                    </h3>
+                  </div>
+                  <div class="p-4">
+                    <form action="#">
+                      <div class="mb-5 flex flex-col gap-4 sm:flex-row">
+                        <div class="w-full sm:w-1/2">
+                          <label
+                            class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            for="fullName"
+                            >Nama Lengkap</label
+                          >
+                          <div class="relative">
+                            <span class="absolute left-4.5 top-4">
+                              <svg
+                                class="fill-current"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <g opacity="0.8">
+                                  <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M3.72039 12.887C4.50179 12.1056 5.5616 11.6666 6.66667 11.6666H13.3333C14.4384 11.6666 15.4982 12.1056 16.2796 12.887C17.061 13.6684 17.5 14.7282 17.5 15.8333V17.5C17.5 17.9602 17.1269 18.3333 16.6667 18.3333C16.2064 18.3333 15.8333 17.9602 15.8333 17.5V15.8333C15.8333 15.1703 15.5699 14.5344 15.1011 14.0655C14.6323 13.5967 13.9964 13.3333 13.3333 13.3333H6.66667C6.00363 13.3333 5.36774 13.5967 4.8989 14.0655C4.43006 14.5344 4.16667 15.1703 4.16667 15.8333V17.5C4.16667 17.9602 3.79357 18.3333 3.33333 18.3333C2.8731 18.3333 2.5 17.9602 2.5 17.5V15.8333C2.5 14.7282 2.93899 13.6684 3.72039 12.887Z"
+                                    fill=""
+                                  />
+                                  <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M9.99967 3.33329C8.61896 3.33329 7.49967 4.45258 7.49967 5.83329C7.49967 7.214 8.61896 8.33329 9.99967 8.33329C11.3804 8.33329 12.4997 7.214 12.4997 5.83329C12.4997 4.45258 11.3804 3.33329 9.99967 3.33329ZM5.83301 5.83329C5.83301 3.53211 7.69849 1.66663 9.99967 1.66663C12.3009 1.66663 14.1663 3.53211 14.1663 5.83329C14.1663 8.13448 12.3009 9.99996 9.99967 9.99996C7.69849 9.99996 5.83301 8.13448 5.83301 5.83329Z"
+                                    fill=""
+                                  />
+                                </g>
+                              </svg>
+                            </span>
+                            <input
+                              class="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 font-medium text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+                              type="text"
+                              name="fullName"
+                              id="fullName"
+                              placeholder="Devid Jhon"
+                              value="Devid Jhon"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="w-full sm:w-1/2">
+                          <label
+                            class="mb-3 block text-sm font-medium text-black dark:text-white"
+                            for="phoneNumber"
+                            >No. Telepon</label
+                          >
+                          <input
+                            class="w-full rounded border border-stroke bg-gray py-3 px-4.5 font-medium text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+                            type="text"
+                            name="phoneNumber"
+                            id="phoneNumber"
+                            placeholder="+990 3343 7865"
+                            value="+990 3343 7865"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="mb-5">
+                        <label
+                          class="mb-3 block text-sm font-medium text-black dark:text-white"
+                          for="emailAddress"
+                          >Alamat Email</label
+                        >
+                        <div class="relative">
+                          <span class="absolute left-4.5 top-4">
+                            <svg
+                              class="fill-current"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g opacity="0.8">
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M3.33301 4.16667C2.87658 4.16667 2.49967 4.54357 2.49967 5V15C2.49967 15.4564 2.87658 15.8333 3.33301 15.8333H16.6663C17.1228 15.8333 17.4997 15.4564 17.4997 15V5C17.4997 4.54357 17.1228 4.16667 16.6663 4.16667H3.33301ZM0.833008 5C0.833008 3.6231 1.9561 2.5 3.33301 2.5H16.6663C18.0432 2.5 19.1663 3.6231 19.1663 5V15C19.1663 16.3769 18.0432 17.5 16.6663 17.5H3.33301C1.9561 17.5 0.833008 16.3769 0.833008 15V5Z"
+                                  fill=""
+                                />
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M0.983719 4.52215C1.24765 4.1451 1.76726 4.05341 2.1443 4.31734L9.99975 9.81615L17.8552 4.31734C18.2322 4.05341 18.7518 4.1451 19.0158 4.52215C19.2797 4.89919 19.188 5.4188 18.811 5.68272L10.4776 11.5161C10.1907 11.7169 9.80879 11.7169 9.52186 11.5161L1.18853 5.68272C0.811486 5.4188 0.719791 4.89919 0.983719 4.52215Z"
+                                  fill=""
+                                />
+                              </g>
+                            </svg>
+                          </span>
+                          <input
+                            class="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 font-medium text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+                            type="email"
+                            name="emailAddress"
+                            id="emailAddress"
+                            placeholder="devidjond45@gmail.com"
+                            value="devidjond45@gmail.com"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="mb-5">
+                        <label
+                          class="mb-3 block text-sm font-medium text-black dark:text-white"
+                          for="Username"
+                          >Username</label
+                        >
+                        <input
+                          class="w-full rounded border border-stroke bg-gray py-3 px-4.5 font-medium text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+                          type="text"
+                          name="Username"
+                          id="Username"
+                          placeholder="devidjhon24"
+                          value="devidjhon24"
+                        />
+                      </div>
+
+                      <div class="mb-5.5">
+                        <label
+                          class="mb-3 block text-sm font-medium text-black dark:text-white"
+                          for="Username"
+                          >BIO</label
+                        >
+                        <div class="relative">
+                          <span class="absolute left-4.5 top-4">
+                            <svg
+                              class="fill-current"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <g
+                                opacity="0.8"
+                                clip-path="url(#clip0_88_10224)"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M1.56524 3.23223C2.03408 2.76339 2.66997 2.5 3.33301 2.5H9.16634C9.62658 2.5 9.99967 2.8731 9.99967 3.33333C9.99967 3.79357 9.62658 4.16667 9.16634 4.16667H3.33301C3.11199 4.16667 2.90003 4.25446 2.74375 4.41074C2.58747 4.56702 2.49967 4.77899 2.49967 5V16.6667C2.49967 16.8877 2.58747 17.0996 2.74375 17.2559C2.90003 17.4122 3.11199 17.5 3.33301 17.5H14.9997C15.2207 17.5 15.4326 17.4122 15.5889 17.2559C15.7452 17.0996 15.833 16.8877 15.833 16.6667V10.8333C15.833 10.3731 16.2061 10 16.6663 10C17.1266 10 17.4997 10.3731 17.4997 10.8333V16.6667C17.4997 17.3297 17.2363 17.9656 16.7674 18.4344C16.2986 18.9033 15.6627 19.1667 14.9997 19.1667H3.33301C2.66997 19.1667 2.03408 18.9033 1.56524 18.4344C1.0964 17.9656 0.833008 17.3297 0.833008 16.6667V5C0.833008 4.33696 1.0964 3.70107 1.56524 3.23223Z"
+                                  fill=""
+                                />
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M16.6664 2.39884C16.4185 2.39884 16.1809 2.49729 16.0056 2.67253L8.25216 10.426L7.81167 12.188L9.57365 11.7475L17.3271 3.99402C17.5023 3.81878 17.6008 3.5811 17.6008 3.33328C17.6008 3.08545 17.5023 2.84777 17.3271 2.67253C17.1519 2.49729 16.9142 2.39884 16.6664 2.39884ZM14.8271 1.49402C15.3149 1.00622 15.9765 0.732178 16.6664 0.732178C17.3562 0.732178 18.0178 1.00622 18.5056 1.49402C18.9934 1.98182 19.2675 2.64342 19.2675 3.33328C19.2675 4.02313 18.9934 4.68473 18.5056 5.17253L10.5889 13.0892C10.4821 13.196 10.3483 13.2718 10.2018 13.3084L6.86847 14.1417C6.58449 14.2127 6.28409 14.1295 6.0771 13.9225C5.87012 13.7156 5.78691 13.4151 5.85791 13.1312L6.69124 9.79783C6.72787 9.65131 6.80364 9.51749 6.91044 9.41069L14.8271 1.49402Z"
+                                  fill=""
+                                />
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_88_10224">
+                                  <rect width="20" height="20" fill="white" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </span>
+
+                          <textarea
+                            class="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 font-medium text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+                            name="bio"
+                            id="bio"
+                            rows="6"
+                            placeholder="Write your bio here"
+                          >
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere fermentum urna, eu condimentum mauris tempus ut. Donec fermentum blandit aliquet.
+                            </textarea
+                          >
+                        </div>
+                      </div>
+
+                      <div class="flex justify-end gap-5 mt-4">
+                        <button
+                          class="flex justify-center rounded border border-stroke py-2 px-6 font-medium text-white bg-red-600"
+                          type="submit"
+                        >
+                          Batal
+                        </button>
+                        <button
+                          class="flex justify-center rounded bg-primary py-2 px-6 font-medium text-white bg-blue-700 hover:bg-opacity-90"
+                          type="submit"
+                        >
+                          Simpan
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-5 xl:col-span-2">
+                <div
+                  class="px-8 rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark"
+                >
+                  <div
+                    class="border-b border-stroke py-4 px-7 mb-4 dark:border-strokedark"
+                  >
+                    <h3 class="font-medium text-black dark:text-white">
+                      Photo Anda
+                    </h3>
+                  </div>
+                  <div class="p-7">
+                    <form action="#">
+                      <div class="mb-4 flex items-center gap-4">
+                        <div class="h-14 w-14 rounded-full">
+                          <img src="./img/Logo-MGI-CORP.png" alt="User" />
+                        </div>
+                        <div class="mb-3">
+                          <span
+                            class="mb-4 font-medium text-black dark:text-white"
+                            >Edit Foto Anda</span
+                          >
+                          <span class="flex gap-5">
+                            <button
+                              class="text-sm font-medium hover:text-primary"
+                            >
+                              Batal
+                            </button>
+                            <button
+                              class="text-sm font-medium hover:text-primary"
+                            >
+                              Update
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+
+                      <div
+                        id="FileUpload"
+                        class="relative mb-5.5 block w-full cursor-pointer appearance-none rounded border-2 border-dashed border-primary bg-gray py-4 px-4 dark:bg-meta-4 sm:py-7.5"
+                      >
+                        <input
+                          type="file"
+                          accept="image/*"
+                          class="absolute inset-0 z-50 m-0 h-full w-full cursor-pointer p-0 opacity-0 outline-none"
+                        />
+                        <div
+                          class="flex flex-col items-center justify-center space-y-3"
+                        >
+                          <span
+                            class="flex h-10 w-10 items-center justify-center rounded-full border border-stroke bg-white dark:border-strokedark dark:bg-boxdark"
+                          >
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M1.99967 9.33337C2.36786 9.33337 2.66634 9.63185 2.66634 10V12.6667C2.66634 12.8435 2.73658 13.0131 2.8616 13.1381C2.98663 13.2631 3.1562 13.3334 3.33301 13.3334H12.6663C12.8431 13.3334 13.0127 13.2631 13.1377 13.1381C13.2628 13.0131 13.333 12.8435 13.333 12.6667V10C13.333 9.63185 13.6315 9.33337 13.9997 9.33337C14.3679 9.33337 14.6663 9.63185 14.6663 10V12.6667C14.6663 13.1971 14.4556 13.7058 14.0806 14.0809C13.7055 14.456 13.1968 14.6667 12.6663 14.6667H3.33301C2.80257 14.6667 2.29387 14.456 1.91879 14.0809C1.54372 13.7058 1.33301 13.1971 1.33301 12.6667V10C1.33301 9.63185 1.63148 9.33337 1.99967 9.33337Z"
+                                fill="#3C50E0"
+                              />
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M7.5286 1.52864C7.78894 1.26829 8.21106 1.26829 8.4714 1.52864L11.8047 4.86197C12.0651 5.12232 12.0651 5.54443 11.8047 5.80478C11.5444 6.06513 11.1223 6.06513 10.8619 5.80478L8 2.94285L5.13807 5.80478C4.87772 6.06513 4.45561 6.06513 4.19526 5.80478C3.93491 5.54443 3.93491 5.12232 4.19526 4.86197L7.5286 1.52864Z"
+                                fill="#3C50E0"
+                              />
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M7.99967 1.33337C8.36786 1.33337 8.66634 1.63185 8.66634 2.00004V10C8.66634 10.3682 8.36786 10.6667 7.99967 10.6667C7.63148 10.6667 7.33301 10.3682 7.33301 10V2.00004C7.33301 1.63185 7.63148 1.33337 7.99967 1.33337Z"
+                                fill="#3C50E0"
+                              />
+                            </svg>
+                          </span>
+                          <p class="text-sm font-medium">
+                            <span class="text-primary">Klik untuk Upload</span>
+                            or drag and drop
+                          </p>
+                          <p class="mt-1.5 text-sm font-medium">
+                            SVG, PNG, JPG or GIF
+                          </p>
+                          <p class="text-sm font-medium">
+                            (max, 800 X 800px)
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="flex justify-end gap-5 mt-5 mb-5">
+                        <button
+                          class="flex justify-center rounded border border-stroke py-2 px-6 font-medium text-white bg-red-600 hover:shadow-1 dark:border-strokedark dark:text-white"
+                          type="submit"
+                        >
+                          Batal
+                        </button>
+                        <button
+                          class="flex justify-center rounded bg-primary py-2 px-6 font-medium text-white bg-blue-700"
+                          type="submit"
+                        >
+                          Simpan
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ====== Settings Section End -->
+          </div>
+        </div>
+      </main> 
+
+    <!-- Hero Section End-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+</body>
+</html>
