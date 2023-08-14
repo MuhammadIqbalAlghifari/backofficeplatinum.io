@@ -7,6 +7,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css"  rel="stylesheet" />
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="../src/file-input.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
 <body style="background-color: #f8f8f8;">
 
@@ -212,48 +215,52 @@
                 <form>
                     <div class="mb-6">
                         <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul Artikel 1 (Hanya Text dan Jika Ada)</label>
-                        <input type="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                        <div class="summernote"></div>
                       </div>
                       <div class="mb-6">
                         <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul Artikel Ke 2 (Hanya Text dan Jika Ada)</label>
-                        <input type="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                        <div class="summernote"></div>
                       </div>
                       <div class="mb-6">
                         <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul Artikel Ke 3 (Hanya Text dan Jika Ada)</label>
-                        <input type="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                        <div class="summernote"></div>
                       </div>
                       <div class="mb-6">
                         <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 1 (Hanya Text dan Jika ada)</label>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+                        <div class="summernote"></div>
                       </div>
                       <div class="mb-6">
                         <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 2 (Hanya Text dan Jika ada)</label>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+                        <div class="summernote"></div>    
                       </div>
                       <div class="mb-6">
                         <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 3 (Hanya Text dan Jika ada)</label>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+                        <div class="summernote"></div>
                       </div>
                       <div class="mb-6">
                         <label for="Telepon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Button Artikel (Hanya Text dan Jika Ada)</label>
-                        <input type="Telepon" id="Telepon" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                        <div class="summernote"></div>
                       </div>
                 </form>
             </div>
     
-            <div id="Home">
-                <div class="grid grid-cols-1 gap-4 mb-4">
-                    <div id="#container">
-                        <input type="file" id="file" accept="image/*" hidden>
-                        <div class="img-area" data-img="">
-                            <i class='bx bxs-cloud-upload icon'></i>
-                            <h3>Upload Image</h3>
-                            <p>Image size must be less than <span>2MB</span></p>
-                        </div>
-                        <button class="select-image">Select Image</button>
-                    </div>
+            <form>
+                <div class="flex flex-col items-center space-y-6">
+                  <div class="shrink-0">
+                    <img id='preview_img' class="h-1/2 w-1/2 object-cover" src="https://lh3.googleusercontent.com/a-/AFdZucpC_6WFBIfaAbPHBwGM9z8SxyM1oV4wB4Ngwp_UyQ=s96-c" alt="Current profile photo" />
+                  </div>
+                  <label class="block">
+                    <span class="sr-only">Choose profile photo</span>
+                    <input type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
+                      file:mr-4 file:py-2 file:px-4
+                      file:border-0
+                      file:text-sm file:font-semibold
+                      file:bg-violet-50 file:text-violet-700
+                      hover:file:bg-violet-100
+                    "/>
+                  </label>
                 </div>
-            </div>
+              </form>
             
     
             
@@ -268,49 +275,53 @@
                     <form>
                         <div class="mb-6">
                             <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul Artikel 1 (Hanya Text dan Jika Ada)</label>
-                            <input type="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                            <div class="summernote"></div>
                           </div>
                           <div class="mb-6">
                             <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul Artikel Ke 2 (Hanya Text dan Jika Ada)</label>
-                            <input type="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                            <div class="summernote"></div>
                           </div>
                           <div class="mb-6">
                             <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul Artikel Ke 3 (Hanya Text dan Jika Ada)</label>
-                            <input type="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                            <div class="summernote"></div>
                           </div>
                           <div class="mb-6">
-                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 1 (Hanya Text dan Jika ada)</label>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
-                      </div>
-                      <div class="mb-6">
-                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 2 (Hanya Text dan Jika ada)</label>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
-                      </div>
-                      <div class="mb-6">
-                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 3 (Hanya Text dan Jika ada)</label>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
-                      </div>
+                            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 1 (Hanya Text dan Jika ada)</label>
+                            <div class="summernote"></div>
+                          </div>
+                          <div class="mb-6">
+                            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 2 (Hanya Text dan Jika ada)</label>
+                            <div class="summernote"></div>    
+                          </div>
+                          <div class="mb-6">
+                            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 3 (Hanya Text dan Jika ada)</label>
+                            <div class="summernote"></div>
+                          </div>
                           <div class="mb-6">
                             <label for="Telepon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Button Artikel (Hanya Text dan Jika Ada)</label>
-                            <input type="Telepon" id="Telepon" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                            <div class="summernote"></div>
                           </div>
                     </form>
                 </div>
             </div>
     
-                <div id="Home">
-                    <div class="grid grid-cols-1 gap-4 mb-4">
-                        <div id="#container">
-                            <input type="file" id="file" accept="image/*" hidden>
-                            <div class="img-area" data-img="">
-                                <i class='bx bxs-cloud-upload icon'></i>
-                                <h3>Upload Image</h3>
-                                <p>Image size must be less than <span>2MB</span></p>
-                            </div>
-                            <button class="select-image">Select Image</button>
-                        </div>
-                    </div>
+            <form>
+                <div class="flex flex-col items-center space-y-6">
+                  <div class="shrink-0">
+                    <img id='preview_img' class="h-1/2 w-1/2 object-cover" src="https://lh3.googleusercontent.com/a-/AFdZucpC_6WFBIfaAbPHBwGM9z8SxyM1oV4wB4Ngwp_UyQ=s96-c" alt="Current profile photo" />
+                  </div>
+                  <label class="block">
+                    <span class="sr-only">Choose profile photo</span>
+                    <input type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
+                      file:mr-4 file:py-2 file:px-4
+                      file:border-0
+                      file:text-sm file:font-semibold
+                      file:bg-violet-50 file:text-violet-700
+                      hover:file:bg-violet-100
+                    "/>
+                  </label>
                 </div>
+              </form>
     
             </div>
         
@@ -325,48 +336,54 @@
                     <form>
                         <div class="mb-6">
                             <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul Artikel 1 (Hanya Text dan Jika Ada)</label>
-                            <input type="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                            <div class="summernote"></div>
                           </div>
                           <div class="mb-6">
                             <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul Artikel Ke 2 (Hanya Text dan Jika Ada)</label>
-                            <input type="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                            <div class="summernote"></div>
                           </div>
                           <div class="mb-6">
                             <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul Artikel Ke 3 (Hanya Text dan Jika Ada)</label>
-                            <input type="address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                            <div class="summernote"></div>
                           </div>
                           <div class="mb-6">
-                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 1 (Hanya Text dan Jika ada)</label>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
-                      </div>
-                      <div class="mb-6">
-                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 2 (Hanya Text dan Jika ada)</label>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
-                      </div>
-                      <div class="mb-6">
-                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 3 (Hanya Text dan Jika ada)</label>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
-                      </div>
+                            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 1 (Hanya Text dan Jika ada)</label>
+                            <div class="summernote"></div>
+                          </div>
+                          <div class="mb-6">
+                            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 2 (Hanya Text dan Jika ada)</label>
+                            <div class="summernote"></div>    
+                          </div>
+                          <div class="mb-6">
+                            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi Artikel 3 (Hanya Text dan Jika ada)</label>
+                            <div class="summernote"></div>
+                          </div>
                           <div class="mb-6">
                             <label for="Telepon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Button Artikel (Hanya Text dan Jika Ada)</label>
-                            <input type="Telepon" id="Telepon" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                            <div class="summernote"></div>
                           </div>
                     </form>
                 </div>
                 </div>
             </div>
         
-                <div id="Home">
-                        <div id="#container">
-                            <input type="file" id="file" accept="image/*" hidden>
-                            <div class="img-area" data-img="">
-                                <i class='bx bxs-cloud-upload icon'></i>
-                                <h3>Upload Logo</h3>
-                                <p>Image size must be less than <span>2MB</span></p>
-                            </div>
-                            <button class="select-image">Select Image</button>
-                        </div>
-                    </div>
+            <form>
+                <div class="flex flex-col items-center space-y-6">
+                  <div class="shrink-0">
+                    <img id='preview_img' class="h-1/2 w-1/2 object-cover" src="https://lh3.googleusercontent.com/a-/AFdZucpC_6WFBIfaAbPHBwGM9z8SxyM1oV4wB4Ngwp_UyQ=s96-c" alt="Current profile photo" />
+                  </div>
+                  <label class="block">
+                    <span class="sr-only">Choose profile photo</span>
+                    <input type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
+                      file:mr-4 file:py-2 file:px-4
+                      file:border-0
+                      file:text-sm file:font-semibold
+                      file:bg-violet-50 file:text-violet-700
+                      hover:file:bg-violet-100
+                    "/>
+                  </label>
+                </div>
+              </form>
                 
                 
                 <div id="Home">
@@ -377,35 +394,41 @@
                                     <h2 class="font-semibold title-font mb-2 sm:text-4xl text-xl">Body Bagian 4</h2>
                                 </p>
                             </div>                                
-                            <div id="Home">
-                                <div class="grid grid-cols-1 gap-4 mb-4">
-                                    <div id="#container">
-                                        <input type="file" id="file" accept="image/*" hidden>
-                                        <div class="img-area" data-img="">
-                                            <i class='bx bxs-cloud-upload icon'></i>
-                                            <h3>Upload Logo</h3>
-                                            <p>Image size must be less than <span>2MB</span></p>
-                                        </div>
-                                        <button class="select-image">Select Image</button>
-                                    </div>
-                                    
+                            <form>
+                                <div class="flex flex-col items-center space-y-6">
+                                  <div class="shrink-0">
+                                    <img id='preview_img' class="h-1/2 w-1/2 object-cover" src="https://lh3.googleusercontent.com/a-/AFdZucpC_6WFBIfaAbPHBwGM9z8SxyM1oV4wB4Ngwp_UyQ=s96-c" alt="Current profile photo" />
+                                  </div>
+                                  <label class="block">
+                                    <span class="sr-only">Choose profile photo</span>
+                                    <input type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
+                                      file:mr-4 file:py-2 file:px-4
+                                      file:border-0
+                                      file:text-sm file:font-semibold
+                                      file:bg-violet-50 file:text-violet-700
+                                      hover:file:bg-violet-100
+                                    "/>
+                                  </label>
                                 </div>
-                            </div>
+                              </form>
 
-                            <div id="Home">
-                                <div class="grid grid-cols-1 gap-4 mb-4">
-                                    <div id="#container">
-                                        <input type="file" id="file" accept="image/*" hidden>
-                                        <div class="img-area" data-img="">
-                                            <i class='bx bxs-cloud-upload icon'></i>
-                                            <h3>Upload Logo</h3>
-                                            <p>Image size must be less than <span>2MB</span></p>
-                                        </div>
-                                        <button class="select-image">Select Image</button>
-                                    </div>
-                                    
+                              <form>
+                                <div class="flex flex-col items-center space-y-6">
+                                  <div class="shrink-0">
+                                    <img id='preview_img' class="h-1/2 w-1/2 object-cover" src="https://lh3.googleusercontent.com/a-/AFdZucpC_6WFBIfaAbPHBwGM9z8SxyM1oV4wB4Ngwp_UyQ=s96-c" alt="Current profile photo" />
+                                  </div>
+                                  <label class="block">
+                                    <span class="sr-only">Choose profile photo</span>
+                                    <input type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
+                                      file:mr-4 file:py-2 file:px-4
+                                      file:border-0
+                                      file:text-sm file:font-semibold
+                                      file:bg-violet-50 file:text-violet-700
+                                      hover:file:bg-violet-100
+                                    "/>
+                                  </label>
                                 </div>
-                            </div>
+                              </form>
                             
                             <div id="Home">
                                 <div class="grid grid-cols-1 gap-4 mb-4">
@@ -422,76 +445,95 @@
                                 </div>
                             </div>
 
-                            <div id="Home">
-                                <div class="grid grid-cols-1 gap-4 mb-4">
-                                    <div id="#container">
-                                        <input type="file" id="file" accept="image/*" hidden>
-                                        <div class="img-area" data-img="">
-                                            <i class='bx bxs-cloud-upload icon'></i>
-                                            <h3>Upload Logo</h3>
-                                            <p>Image size must be less than <span>2MB</span></p>
-                                        </div>
-                                        <button class="select-image">Select Image</button>
-                                    </div>
-                                    
+                            <form>
+                                <div class="flex flex-col items-center space-y-6">
+                                  <div class="shrink-0">
+                                    <img id='preview_img' class="h-1/2 w-1/2 object-cover" src="https://lh3.googleusercontent.com/a-/AFdZucpC_6WFBIfaAbPHBwGM9z8SxyM1oV4wB4Ngwp_UyQ=s96-c" alt="Current profile photo" />
+                                  </div>
+                                  <label class="block">
+                                    <span class="sr-only">Choose profile photo</span>
+                                    <input type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
+                                      file:mr-4 file:py-2 file:px-4
+                                      file:border-0
+                                      file:text-sm file:font-semibold
+                                      file:bg-violet-50 file:text-violet-700
+                                      hover:file:bg-violet-100
+                                    "/>
+                                  </label>
                                 </div>
-                            </div>
+                              </form>
 
-                            <div id="Home">
-                                <div class="grid grid-cols-1 gap-4 mb-4">
-                                    <div id="#container">
-                                        <input type="file" id="file" accept="image/*" hidden>
-                                        <div class="img-area" data-img="">
-                                            <i class='bx bxs-cloud-upload icon'></i>
-                                            <h3>Upload Logo</h3>
-                                            <p>Image size must be less than <span>2MB</span></p>
-                                        </div>
-                                        <button class="select-image">Select Image</button>
-                                    </div>
-                                    
+                              <form>
+                                <div class="flex flex-col items-center space-y-6">
+                                  <div class="shrink-0">
+                                    <img id='preview_img' class="h-1/2 w-1/2 object-cover" src="https://lh3.googleusercontent.com/a-/AFdZucpC_6WFBIfaAbPHBwGM9z8SxyM1oV4wB4Ngwp_UyQ=s96-c" alt="Current profile photo" />
+                                  </div>
+                                  <label class="block">
+                                    <span class="sr-only">Choose profile photo</span>
+                                    <input type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
+                                      file:mr-4 file:py-2 file:px-4
+                                      file:border-0
+                                      file:text-sm file:font-semibold
+                                      file:bg-violet-50 file:text-violet-700
+                                      hover:file:bg-violet-100
+                                    "/>
+                                  </label>
                                 </div>
-                            </div>
+                              </form>
 
-                            <div id="Home">
-                                <div class="grid grid-cols-1 gap-4 mb-4">
-                                    <div id="#container">
-                                        <input type="file" id="file" accept="image/*" hidden>
-                                        <div class="img-area" data-img="">
-                                            <i class='bx bxs-cloud-upload icon'></i>
-                                            <h3>Upload Logo</h3>
-                                            <p>Image size must be less than <span>2MB</span></p>
-                                        </div>
-                                        <button class="select-image">Select Image</button>
-                                    </div>
-                                    
+                              <form>
+                                <div class="flex flex-col items-center space-y-6">
+                                  <div class="shrink-0">
+                                    <img id='preview_img' class="h-1/2 w-1/2 object-cover" src="https://lh3.googleusercontent.com/a-/AFdZucpC_6WFBIfaAbPHBwGM9z8SxyM1oV4wB4Ngwp_UyQ=s96-c" alt="Current profile photo" />
+                                  </div>
+                                  <label class="block">
+                                    <span class="sr-only">Choose profile photo</span>
+                                    <input type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
+                                      file:mr-4 file:py-2 file:px-4
+                                      file:border-0
+                                      file:text-sm file:font-semibold
+                                      file:bg-violet-50 file:text-violet-700
+                                      hover:file:bg-violet-100
+                                    "/>
+                                  </label>
                                 </div>
-                            </div>
+                              </form>
 
-                            <div id="Home">
-                                <div class="grid grid-cols-1 gap-4 mb-4">
-                                    <div id="#container">
-                                        <input type="file" id="file" accept="image/*" hidden>
-                                        <div class="img-area" data-img="">
-                                            <i class='bx bxs-cloud-upload icon'></i>
-                                            <h3>Upload Logo</h3>
-                                            <p>Image size must be less than <span>2MB</span></p>
-                                        </div>
-                                        <button class="select-image">Select Image</button>
-                                    </div>
-                                    
+                              <form>
+                                <div class="flex flex-col items-center space-y-6">
+                                  <div class="shrink-0">
+                                    <img id='preview_img' class="h-1/2 w-1/2 object-cover" src="https://lh3.googleusercontent.com/a-/AFdZucpC_6WFBIfaAbPHBwGM9z8SxyM1oV4wB4Ngwp_UyQ=s96-c" alt="Current profile photo" />
+                                  </div>
+                                  <label class="block">
+                                    <span class="sr-only">Choose profile photo</span>
+                                    <input type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
+                                      file:mr-4 file:py-2 file:px-4
+                                      file:border-0
+                                      file:text-sm file:font-semibold
+                                      file:bg-violet-50 file:text-violet-700
+                                      hover:file:bg-violet-100
+                                    "/>
+                                  </label>
                                 </div>
-                            </div>
+                              </form>
 
-                            <div id="Home">
-                                <div class="grid grid-cols-1 gap-4 mb-4">
-                                    <div id="#container">
-                                        <input type="file" id="file" accept="image/*" hidden>
-                                        <div class="img-area" data-img="">
-                                            <i class='bx bxs-cloud-upload icon'></i>
-                                            <h3>Upload Logo</h3>
-                                            <p>Image size must be less than <span>2MB</span></p>
-                                        </div>
-                                        <button class="select-image">Select Image</button>
+                              <form>
+                                <div class="flex flex-col items-center space-y-6">
+                                  <div class="shrink-0">
+                                    <img id='preview_img' class="h-1/2 w-1/2 object-cover" src="https://lh3.googleusercontent.com/a-/AFdZucpC_6WFBIfaAbPHBwGM9z8SxyM1oV4wB4Ngwp_UyQ=s96-c" alt="Current profile photo" />
+                                  </div>
+                                  <label class="block">
+                                    <span class="sr-only">Choose profile photo</span>
+                                    <input type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
+                                      file:mr-4 file:py-2 file:px-4
+                                      file:border-0
+                                      file:text-sm file:font-semibold
+                                      file:bg-violet-50 file:text-violet-700
+                                      hover:file:bg-violet-100
+                                    "/>
+                                  </label>
+                                </div>
+                              </form>
                                     </div>
                                     <button class="grid font-semibold text-white bg-red-600 border-0 py-2 px-6 focus:outline-none rounded text-lg"><a>Tambah Bagian Body</a></button>
                                     <button class="grid font-semibold text-white bg-red-600 border-0 py-2 px-6 focus:outline-none rounded text-lg"><a>Tambah Gambar atau Logo di Bagian Body</a></button>
@@ -504,6 +546,18 @@
     </div>
 
     <!-- Hero Section End-->
+
+    <!-- Js Start -->
+
+    <script>
+        $('.summernote').summernote({
+          placeholder: 'Ketik Disini',
+          tabsize: 2,
+          height: 100
+        });
+      </script>
+
+    <!-- Js End -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
     <script src="../src/file-input.js"></script>

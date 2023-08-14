@@ -1,27 +1,14 @@
-const selectImage = document.querySelector('.select-image');
-const inputFile = document.querySelector('#file');
-const imgArea = document.querySelector('.img-area');
+var loadFile = function(event) {
+            
+	var input = event.target;
+	var file = input.files[0];
+	var type = file.type;
 
-selectImage.addEventListener('click', function () {
-	inputFile.click();
-})
+   var output = document.getElementById('preview_img');
 
-inputFile.addEventListener('change', function () {
-	const image = this.files[0]
-	if(image.size < 2000000) {
-		const reader = new FileReader();
-		reader.onload = ()=> {
-			const allImg = imgArea.querySelectorAll('img');
-			allImg.forEach(item=> item.remove());
-			const imgUrl = reader.result;
-			const img = document.createElement('img');
-			img.src = imgUrl;
-			imgArea.appendChild(img);
-			imgArea.classList.add('active');
-			imgArea.dataset.img = image.name;
-		}
-		reader.readAsDataURL(image);
-	} else {
-		alert("Image size more than 2MB");
+
+	output.src = URL.createObjectURL(event.target.files[0]);
+	output.onload = function() {
+		URL.revokeObjectURL(output.src) // free memory
 	}
-})
+};
