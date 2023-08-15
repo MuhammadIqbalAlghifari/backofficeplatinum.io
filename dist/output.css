@@ -1138,6 +1138,10 @@ input:checked + .toggle-bg {
   display: none;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -1148,10 +1152,6 @@ input:checked + .toggle-bg {
 
 .h-9 {
   height: 2.25rem;
-}
-
-.h-1 {
-  height: 0.25rem;
 }
 
 .w-1\/2 {
@@ -1278,12 +1278,12 @@ input:checked + .toggle-bg {
   overflow: hidden;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .rounded {
   border-radius: 0.25rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .rounded-l-lg {
