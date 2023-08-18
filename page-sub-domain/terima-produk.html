@@ -103,11 +103,11 @@
                                         </svg>
                                     </button>
                                     <!-- Dropdown menu -->
-                                    <div id="dropdownPages" class="z-10  hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="multiLevelDropdownButtonPages">
+                                    <div id="dropdownPages" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                        <ul class="py-2 text-sm text-gray-700   dark:text-gray-200" aria-labelledby="multiLevelDropdownButtonPages">
                                             <li>
                                                 
-                                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="multiLevelDropdownButtonPages">
+                                                    <ul class="py-2 text-sm text-gray-700 overflow-y-scroll dark:text-gray-200" aria-labelledby="multiLevelDropdownButtonPages">
                                                             <li>
                                                                 <a href="./home-edit.html" class="block px-4 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Home</a>
                                                             </li>
@@ -135,6 +135,10 @@
                                                             <li>
                                                               <a href="./terima-produk.html" class="block px-4 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Terima Produk</a>
                                                             </li>
+                                                            <li>
+                                                              <a href="./terima-produk.html" class="block px-4 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Terima Produk</a>
+                                                            </li>
+                                                            
                                                     </ul>
                                                 
                                             </li>
@@ -211,69 +215,70 @@
     <!-- Hero Section Start -->
 
     <div class="p-8 sm:ml-64 text-lg">
-        <div class="p-4">
-           <div class="grid grid-cols-1">
-              <div class="flex flex-col items-center justify-center rounded">
-                 <p class="text-2xl text-gray-400 dark:text-gray-500 text-center lg:w-2/3">
-                    <h1 class="font-semibold title-font sm:text-4xl">Edit Asset di Halaman Garansi</h1>
-                 </p>
-                 <p class="text-2xl text-gray-400 mt-4 dark:text-gray-500 text-center lg:w-2/3">
-                    <h2 class="font-semibold title-font mb-2 sm:text-4xl text-xl">Body Bagian 1</h2>
-                 </p>
-              </div>
-           </div>
-    
-           <div id="Home">
+      <div class="p-4">
+         <div class="grid grid-cols-1">
+            <div class="flex flex-col items-center justify-center">
+               <p class="text-2xl text-gray-400 dark:text-gray-500 text-center lg:w-2/3">
+                  <h1 class="font-semibold title-font sm:text-4xl">Edit Asset di Halaman Terima Produk</h1>
+               </p>
+            </div>
+         </div>
+
+         <div id="Home">
+            <div class="grid grid-cols-1 gap-4 mb-4">
+                <div class="items-center flex flex-col mt-5  justify-center">
+                    <p class="text-2xl text-gray-400 mt-4 dark:text-gray-500 text-center lg:w-2/3">
+                        <h2 class="font-semibold title-font mb-2 sm:text-4xl text-xl">Body</h2>
+                    </p>
+                </div>                  
                 <form>
                     <div class="mb-6">
                         <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul</label>
                         <div class="summernote"></div>
                       </div>
                       <div class="mb-6">
-                        <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Deskripsi Form</label>
-                        <div class="summernote"></div>
-                      </div>
-                      <div class="mb-6">
-                        <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul Form</label>
+                        <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Deskripsi</label>
                         <div class="summernote"></div>
                       </div>
                 </form>
             </div>
-    
-            <form>
-                <div class="flex flex-col items-center space-y-6">
-                  <div class="mb-6">
-                    <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gambar Backround</label>
-                  </div>
-                  <div class="shrink-0">
-                    <img id='preview_img' class="h-1/2 w-1/2 object-cover" src="https://lh3.googleusercontent.com/a-/AFdZucpC_6WFBIfaAbPHBwGM9z8SxyM1oV4wB4Ngwp_UyQ=s96-c" alt="Current profile photo" />
-                  </div>
-                  <label class="block">
-                    <span class="sr-only">Choose profile photo</span>
-                    <input type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
-                      file:mr-4 file:py-2 file:px-4
-                      file:border-0
-                      file:text-sm file:font-semibold
-                      file:bg-violet-50 file:text-violet-700
-                      hover:file:bg-violet-100
-                    "/>
-                  </label>
-                </div>
-              </form>
-            
-    
-            
-    
-              <div class="grid grid-cols-1 gap-3 mt-6">
-                          <button class="grid font-semibold text-white bg-red-600 border-0 py-2 px-6 focus:outline-none rounded text-lg"><a>Update</a></button>
+        </div>
+
+        <form>
+            <div class="flex flex-col items-center space-y-6">
+              <div class="mb-2">
+                <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gambar Backround</label>
+              </div>
+              <div class="shrink-0">
+                <img id='preview_img' class="h-1/2 w-1/2 object-cover" src="https://lh3.googleusercontent.com/a-/AFdZucpC_6WFBIfaAbPHBwGM9z8SxyM1oV4wB4Ngwp_UyQ=s96-c" alt="Current profile photo" />
+              </div>
+              <label class="block">
+                <span class="sr-only">Choose profile photo</span>
+                <input type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
+                  file:mr-4 file:py-2 file:px-4
+                  file:border-0
+                  file:text-sm file:font-semibold
+                  file:bg-violet-50 file:text-violet-700
+                  hover:file:bg-violet-100
+                "/>
+              </label>
+            </div>
+          </form>
+  
+                              <div class="grid grid-cols-1">
+                                <button class="grid font-semibold text-white bg-blue-600 mt-6 border-0 py-2 text-sm"><a>Update</a></button>
+                            </div>
                         </div>
                     </div>
-                    </div>
-    </div>
+            </div>
 
-    <!-- Hero Section End-->
+            
+               </div>
+     </div>
+      </div>
+  </div>
 
-    <!-- Js Start -->
+    <!-- Hero Section End--><!-- Js Start -->
 
     <script>
         $('.summernote').summernote({
@@ -284,6 +289,8 @@
       </script>
 
     <!-- Js End -->
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
     <script src="../src/file-input.js"></script>

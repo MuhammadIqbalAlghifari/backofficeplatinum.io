@@ -210,66 +210,101 @@
 
     <!-- Hero Section Start -->
 
-    <div class="p-8 sm:ml-64 text-lg">
-        <div class="p-4">
-           <div class="grid grid-cols-1">
-              <div class="flex flex-col items-center justify-center rounded">
-                 <p class="text-2xl text-gray-400 dark:text-gray-500 text-center lg:w-2/3">
-                    <h1 class="font-semibold title-font sm:text-4xl">Edit Asset di Halaman Garansi</h1>
-                 </p>
-                 <p class="text-2xl text-gray-400 mt-4 dark:text-gray-500 text-center lg:w-2/3">
-                    <h2 class="font-semibold title-font mb-2 sm:text-4xl text-xl">Body Bagian 1</h2>
-                 </p>
-              </div>
-           </div>
-    
-           <div id="Home">
-                <form>
-                    <div class="mb-6">
-                        <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul</label>
-                        <div class="summernote"></div>
-                      </div>
-                      <div class="mb-6">
-                        <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Deskripsi Form</label>
-                        <div class="summernote"></div>
-                      </div>
-                      <div class="mb-6">
-                        <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul Form</label>
-                        <div class="summernote"></div>
-                      </div>
-                </form>
+        
+    <div class="p-8 sm:ml-64">
+      <div class="p-4">
+         <div class="grid grid-cols-1">
+            <div class="flex flex-col items-center justify-center rounded mb-4">
+               <p class="text-2xl text-gray-400 dark:text-gray-500 text-center lg:w-2/3">
+                  <h1 class="font-semibold title-font sm:text-4xl text-2xl">Postingan (Artikel)</h1>
+               </p>
             </div>
-    
-            <form>
-                <div class="flex flex-col items-center space-y-6">
-                  <div class="mb-6">
-                    <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gambar Backround</label>
+         </div>
+  
+         <div id="Home">
+              <div class="grid grid-cols-1 gap-4 mb-4 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3">                  
+                
+                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                      <img class="rounded-t-lg" src="../img/artikel-1.png" alt="" />
+                  </a>
+                  <div class="p-5">
+                      <a href="#">
+                          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">CNP Baja Ringan</h5>
+                      </a>
+                      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                      <a href="./edit-postingan.html" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                          Edit
+                          <svg class="w-3.5 h-3.5 ml-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"/>
+                          </svg>
+                      </a>
                   </div>
-                  <div class="shrink-0">
-                    <img id='preview_img' class="h-1/2 w-1/2 object-cover" src="https://lh3.googleusercontent.com/a-/AFdZucpC_6WFBIfaAbPHBwGM9z8SxyM1oV4wB4Ngwp_UyQ=s96-c" alt="Current profile photo" />
-                  </div>
-                  <label class="block">
-                    <span class="sr-only">Choose profile photo</span>
-                    <input type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500
-                      file:mr-4 file:py-2 file:px-4
-                      file:border-0
-                      file:text-sm file:font-semibold
-                      file:bg-violet-50 file:text-violet-700
-                      hover:file:bg-violet-100
-                    "/>
-                  </label>
                 </div>
-              </form>
-            
-    
-            
-    
-              <div class="grid grid-cols-1 gap-3 mt-6">
-                          <button class="grid font-semibold text-white bg-red-600 border-0 py-2 px-6 focus:outline-none rounded text-lg"><a>Update</a></button>
-                        </div>
-                    </div>
-                    </div>
-    </div>
+
+                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                      <img class="rounded-t-lg" src="../img/artikel-2.png" alt="" />
+                  </a>
+                  <div class="p-5">
+                      <a href="#">
+                          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Atap Metal</h5>
+                      </a>
+                      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                      <a href="./edit-postingan.html" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                          Edit
+                          <svg class="w-3.5 h-3.5 ml-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"/>
+                          </svg>
+                      </a>
+                  </div>
+                </div>
+
+                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                      <img class="rounded-t-lg" src="../img/artikel-3.png" alt="" />
+                  </a>
+                  <div class="p-5">
+                      <a href="#">
+                          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Hollow Baja Ringan</h5>
+                      </a>
+                      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                      <a href="./edit-postingan.html" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                          Edit
+                          <svg class="w-3.5 h-3.5 ml-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"/>
+                          </svg>
+                      </a>
+                  </div>
+                </div>
+
+                <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <a href="#">
+                      <img class="rounded-t-lg" src="../img/artikel-4.png" alt="" />
+                  </a>
+                  <div class="p-5">
+                      <a href="#">
+                          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Reng Baja Ringan</h5>
+                      </a>
+                      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                      <a href="./edit-postingan.html" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                          Edit
+                          <svg class="w-3.5 h-3.5 ml-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"/>
+                          </svg>
+                      </a>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="grid grid-cols-1">
+                  <a href="./tambahkan-postingan.html" class="bg-blue-600 py-2 text-white font-semibold text-sm text-center">Tambahkan Postingan</a>
+              </div>
+
+          </div>
+                        
+  </div>
 
     <!-- Hero Section End-->
 
