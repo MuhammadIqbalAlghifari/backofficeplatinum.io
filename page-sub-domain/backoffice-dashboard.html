@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html  lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Dashboard - Platinum</title>
+    <title>Verifikasi Produk - Dashboard</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css"  rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="../src/file-input.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
 <body style="background-color: #f8f8f8;">
 
     <!-- Start Sidebar -->
 
-    <section class="Sidebar" >
+    <section class="Sidebar " >
 
-        <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-black rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="fixed inline-flex items-center p-2 mt-2 ml-3 text-sm text-black rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
             <span class="sr-only">Open sidebar</span>
             <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
             </svg>
          </button>
 
-         <aside id="logo-sidebar" class="absolute top-0 left-0 z-40 h-full w-1/4 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+         <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 h-screen w-60 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
             
-            <div class="px-3 py-4 overflow-y-auto pb-10" style="background-color: black; height: 100%;">
+            <div class="h-full px-3 py-4 overflow-y-auto" style="background-color: black;">
                 <a href="https://flowbite.com/" class="flex items-center justify-center pl-2.5 mb-5">
                     <img src="../img/PLATINUM LOGOS.png" class="h-6 mr-3 sm:h-7" alt="Flowbite Logo" />
                  </a>
@@ -32,7 +37,7 @@
                 <ul class="space-y-2 font-light">
 
                     <li>
-                        <a href="./backoffice-dashboard.html" class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-white dark:hover:bg-gray-700 group">
+                        <a href="./backoffice-home.html" class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-white dark:hover:bg-gray-700 group">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-6 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black">
                                 <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
                                 <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
@@ -40,19 +45,23 @@
                             <span class="ml-3 text-black transition duration-75  dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black">Home</span>
                         </a>
                     </li>
-
                     
-               </li>
-               <li>
 
-                <li>
+                    <li>
+                        <a href="./backoffice-dashboard.html" class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-white dark:hover:bg-gray-700 group">
+                            <svg class="w-5 h-6 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"fill="none" viewBox="0 0 17 18">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 12v5m5-9v9m5-5v5m5-9v9M1 7l5-6 5 6 5-6"/>
+                              </svg>
+                            <span class="ml-3 text-black transition duration-75  dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black">Dashboard</span>
+                        </a>
+                    </li>
 
                     <button type="button" class="flex items-center w-full p-2 text-base text-white rounded-lg dark:text-white hover:bg-white dark:hover:bg-gray-700 group" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                        <svg class="flex-shrink-0 w-5 h-5 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
-                            <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"/>
-                        </svg>
-                        <span class="flex-1 ml-3 text-left whitespace-nowrap text-black transition duration-75  dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black">Dashboard</span>
-                        <svg class="w-3 h-3 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z" />
+                          </svg>                          
+                        <span class="flex-1 ml-2.5 text-left whitespace-nowrap text-black transition duration-75  dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black">Web Management</span>
+                        <svg class="w-2 h-3 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                         </svg>
                     </button>
@@ -98,11 +107,11 @@
                                         </svg>
                                     </button>
                                     <!-- Dropdown menu -->
-                                    <div id="dropdownPages" class="z-10  hidden bg-white divide-y divide-gray-100 rounded-lg shadow overflow dark:bg-gray-700">
+                                    <div id="dropdownPages" class="z-10  hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="multiLevelDropdownButtonPages">
                                             <li>
                                                 
-                                                    <ul class="text-sm text-gray-700 dark:text-gray-200 overflow-y-auto" aria-labelledby="multiLevelDropdownButtonPages">
+                                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="multiLevelDropdownButtonPages">
                                                             <li>
                                                                 <a href="./home-edit.html" class="block px-4 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Home</a>
                                                             </li>
@@ -128,7 +137,7 @@
                                                                 <a href="./tolak-produk.html" class="block px-4 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tolak Produk</a>
                                                             </li>
                                                             <li>
-                                                                <a href="./terima-produk.html" class="block px-4 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Terima Produk</a>
+                                                              <a href="./terima-produk.html" class="block px-4 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Terima Produk</a>
                                                             </li>
                                                     </ul>
                                                 
@@ -137,47 +146,48 @@
                                     </div>
                             </li>
 
-                            <li>
-                                <button id="profil" data-dropdown-toggle="profilData" class="ml-4 text-white bg-transparent focus:outline-none focus:ring-blue-300 font-light rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-                                    <svg class="w-5 h-5 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                                        <path d="M16 0H4a2 2 0 0 0-2 2v1H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4.5a3 3 0 1 1 0 6 3 3 0 0 1 0-6ZM13.929 17H7.071a.5.5 0 0 1-.5-.5 3.935 3.935 0 1 1 7.858 0 .5.5 0 0 1-.5.5Z"/>
-                                      </svg>                                      
-                                    <span class="ml-2">Profil</span>
-                                    <svg class="w-2.5 h-2.5 ml-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                                    </svg>
-                                </button>
-                                <!-- Dropdown menu -->
-                                <div id="profilData" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-48 dark:bg-gray-700">
-                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="profil">
-                                        <li>
-                                            
-                                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="profil">
-                                                    <li>
-                                                        <a href="./tambah-data-pengguna.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tambah Data Pengguna</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="./daftar-data-pengguna.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Daftar Data Pengguna</a>
-                                                    </li>
-                                                </ul>
-                                            
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
                         </ul>
-                    </li>               
+                    </li>
+                    
+                    <li>
+                        <button id="profil" data-dropdown-toggle="profilData" class="text-white bg-transparent focus:outline-none focus:ring-blue-300 font-light rounded-lg text-base ml-2 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                            <svg class="w-5 h-6 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                <path d="M16 0H4a2 2 0 0 0-2 2v1H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4.5a3 3 0 1 1 0 6 3 3 0 0 1 0-6ZM13.929 17H7.071a.5.5 0 0 1-.5-.5 3.935 3.935 0 1 1 7.858 0 .5.5 0 0 1-.5.5Z"/>
+                              </svg>                                      
+                            <span class="ml-4">Profil</span>
+                            <svg class="w-2 h-3 ml-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div id="profilData" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-48 dark:bg-gray-700">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="profil">
+                                <li>
+                                    
+                                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="profil">
+                                            <li>
+                                                <a href="./tambah-data-pengguna.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tambah Data Pengguna</a>
+                                            </li>
+                                            <li>
+                                                <a href="./daftar-data-pengguna.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Daftar Data Pengguna</a>
+                                            </li>
+                                        </ul>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
                 <ul class="pt-4 mt-4 space-y-2 font-light border-t border-gray-200 dark:border-gray-700">
-                    <li>
-                        <a href="./logo-edit.html" class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-white dark:hover:bg-gray-700 group">
-                          <svg class="w-5 h-5 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                            <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM10.5 6a1.5 1.5 0 1 1 0 2.999A1.5 1.5 0 0 1 10.5 6Zm2.221 10.515a1 1 0 0 1-.858.485h-8a1 1 0 0 1-.9-1.43L5.6 10.039a.978.978 0 0 1 .936-.57 1 1 0 0 1 .9.632l1.181 2.981.541-1a.945.945 0 0 1 .883-.522 1 1 0 0 1 .879.529l1.832 3.438a1 1 0 0 1-.031.988Z"/>
-                            <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"/>
-                          </svg>
-                          <span class="ml-3 text-black transition duration-75  dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black">Logo</span>
-                        </a>
-                    </li>
+                  <li>
+                    <a href="./logo-edit.html" class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-white dark:hover:bg-gray-700 group">
+                      <svg class="w-5 h-5 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+                        <path d="M14.066 0H7v5a2 2 0 0 1-2 2H0v11a1.97 1.97 0 0 0 1.934 2h12.132A1.97 1.97 0 0 0 16 18V2a1.97 1.97 0 0 0-1.934-2ZM10.5 6a1.5 1.5 0 1 1 0 2.999A1.5 1.5 0 0 1 10.5 6Zm2.221 10.515a1 1 0 0 1-.858.485h-8a1 1 0 0 1-.9-1.43L5.6 10.039a.978.978 0 0 1 .936-.57 1 1 0 0 1 .9.632l1.181 2.981.541-1a.945.945 0 0 1 .883-.522 1 1 0 0 1 .879.529l1.832 3.438a1 1 0 0 1-.031.988Z"/>
+                        <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z"/>
+                      </svg>
+                      <span class="ml-3 text-black transition duration-75  dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black">Logo</span>
+                    </a>
+                </li>
                     <li>
                        <a href="./pengaturan.html" class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-white dark:hover:bg-gray-700 group">
                         <svg class="w-5 h-5 text-black transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -195,6 +205,8 @@
                         </a>
                      </li>
                  </ul>
+
+                    
             </div>
         </aside>
     </section>
@@ -203,30 +215,232 @@
 
     <!-- Hero Section Start -->
 
-        
-    <div class="sm:ml-64" style="margin-top: 130px;">
-        <div class="p-5">
-           <div class="grid grid-cols-1 w-screen">
-              <div class="flex items-center justify-center rounded">
-                <section class="text-black body-font">
-                    <div class="container mx-auto flex px-5 py-28 items-center justify-center flex-col">
-                      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="../img/PLATINUM LOGOS.png">
-                      <div class="text-center lg:w-2/3 w-full">
-                        <h1 class="title-font sm:text-4xl text-4xl mb-4 font-medium">Selamat Datang di Web Back-Office MGI Corp Dashboard</h1>
-                        <p class="leading-relaxed">Website ini khusus untuk Back-Office staff. Dashboard ini berguna untuk memanipulasi asset.</p>
-                        <p> Silahkan pilih menu di navigasi bar yang anda inginkan.</p>
-                      </div>
+    <div class="p-8 sm:ml-64 text-lg lg:pb-0">
+      <div class="p-4">
+         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            
+            <div class="bg-white w-full rounded shadow-lg px-4 py-6">
+                <div class="flex item-center justify-between">
+                    <p class="font-medium text-base">Total Penjualan</p>
+                    <p class="font-light text-xs mt-1">22 - 30 Agustus 2023</p>
+                </div>
+                <div class="flex justify-start mt-8">
+                    <h1 class="font-bold text-xl">Rp. 500.000.000</h1>
+                </div>
+                <div class="flex justify-around gap-2 mt-2">
+                    <p>
+                        <svg class="w-4 h-4 text-green-500 dark:text-white mt-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+                        </svg>
+                        <p class="text-green-500 font-medium">33.87%</p>
+                    </p>
+                    
+                    <p class="text-xs mt-2">Dari minggu lalu</p>
+                </div>
+            </div>
+
+            <div class="bg-white w-full rounded shadow-lg px-4 py-6">
+                <div class="flex item-center justify-between">
+                    <p class="font-medium text-base">Total Item Terjual</p>
+                    <p class="font-light text-xs mt-1">22 - 30 Agustus 2023</p>
+                </div>
+                <div class="flex justify-start mt-8">
+                    <h1 class="font-bold text-xl">128,980</h1>
+                </div>
+                <div class="flex justify-around gap-2 mt-2">
+                    <p>
+                        <svg class="w-4 h-4 text-red-500 dark:text-white mt-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1v12m0 0 4-4m-4 4L1 9"/>
+                        </svg>
+                        <p class="text-red-500 font-medium">33.87%</p>
+                    </p>
+                    
+                    <p class="text-xs mt-2">Dari minggu lalu</p>
+                </div>
+            </div>
+
+            <div class="bg-white w-full rounded shadow-lg px-4 py-6">
+                <div class="flex item-center justify-between">
+                    <p class="font-medium text-base">Total Pengunjung</p>
+                    <p class="font-light text-xs mt-1">22 - 30 Agustus 2023</p>
+                </div>
+                <div class="flex justify-start mt-8">
+                    <h1 class="font-bold text-xl">2,889,028</h1>
+                </div>
+                <div class="flex justify-around gap-2 mt-2">
+                    <p>
+                        <svg class="w-4 h-4 text-green-500 dark:text-white mt-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+                        </svg>
+                        <p class="text-green-500 font-medium">33.87%</p>
+                    </p>
+                    
+                    <p class="text-xs mt-2">Dari minggu lalu</p>
+                </div>
+            </div>
+
+         </div>
+      </div>
+  </div>
+
+  <div class="p-8 sm:ml-64 lg:pt-0 text-lg">
+    <div class="p-4">
+        <div class="grid -mt-10 grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
+
+            
+            <!-- Chart -->
+            <div class="w-full bg-white rounded-lg shadow-lg dark:bg-gray-800 p-4 md:p-6 lg:py-2">
+                <div class="flex justify-between pb-4 pt-4 mb-4 border-b border-gray-200 dark:border-gray-700">
+                <div class="flex items-center">
+                    <div>
+                    <h5 class="leading-none text-2xl font-bold text-gray-900 dark:text-white pb-1">Laporan Statistik</h5>
+                    <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Periode 22- 30 agustus, 2023</p>
                     </div>
-                  </section>
-              </div>
-           </div>
+                </div>
+                <div>
+                    <span class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-green-900 dark:text-green-300">
+                    <svg class="w-2.5 h-2.5 mr-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+                    </svg>
+                    42.5%
+                    </span>
+                </div>
+                </div>
+            
+                <div class="grid grid-cols-2">
+                <dl class="flex items-center">
+                    <dt class="text-gray-500 dark:text-gray-400 text-xs font-normal mr-1 sm:text-xs">Uang Keluar   :</dt>
+                    <dd class="text-gray-900 text-xs dark:text-white font-semibold sm:text-xs">Rp 500.000.000</dd>
+                </dl>
+                <dl class="flex items-center justify-end">
+                    <dt class="text-gray-500 dark:text-gray-400 text-sm font-normal mr-1 sm:text-xs">Tingkat Konversi:</dt>
+                    <dd class="text-gray-900 text-xs dark:text-white font-semibold sm:text-xs">1.2%</dd>
+                </dl>
+                </div>
+            
+                <div id="column-chart"></div>
+                <div class="grid grid-cols-1 items-center border-gray-200 border-t dark:border-gray-700 justify-between">
+                    <div class="flex justify-between items-center pt-5">
+                    <!-- Button -->
+                    <button
+                        id="dropdownDefaultButton"
+                        data-dropdown-toggle="lastDaysdropdown"
+                        data-dropdown-placement="bottom"
+                        class="text-sm font-medium text-center inline-flex items-center text-black"
+                        type="button">
+                        7 Hari terakhir
+                        <svg class="w-2.5 m-2.5 ml-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="lastDaysdropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                            <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kemarin</a>
+                            </li>
+                            <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Hari Ini</a>
+                            </li>
+                            <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">7 Hari terakhir</a>
+                            </li>
+                            <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">30 Hari Terakhir</a>
+                            </li>
+                            <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">90 Hari Terakhir</a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Chart -->
+            
+            <!--Testimonial-->
+            <div class="bg-white w-full rounded shadow-lg px-4 py-6 overflow-y-auto">
+                <div class="flex item-center w-full justify-between pb-4 border-b mx-auto">
+                    <p class="font-medium text-base">Transaksi terakhir</p>
+                    <a href="#" class="font-light text-xs px-5 py-2 bg-gray-600 rounded-full text-white">Lihat Semua Transaksi</a>
+                </div>
+                <div class="flex justify-start gap-4 items-center mt-8">
+                    <img src="https://source.unsplash.com/random/200x200?sig=1" alt="" class="rounded-full w-10 h-10">
+                    <div class="flex-col">
+                        <p class="text-sm font-bold">Asep<p class="text-xs">Pada Agustus 27 2023</p></p>
+                    </div>
+                    <p class="text-sm font-bold">Rp. 2.200.000</p>
+                    <p class="bg-green-500 p-1 rounded-full"></p>
+                    <p class="text-xs">Dikonfirmasi</p>
+                </div>
+                <div class="flex justify-start gap-4 items-center mt-8">
+                    <img src="https://source.unsplash.com/random/200x200?sig=2" alt="" class="rounded-full w-10 h-10">
+                    <div class="flex-col">
+                        <p class="text-sm font-bold">Agus<p class="text-xs">Pada Agustus 27 2023</p></p>
+                    </div>
+                    <p class="text-sm font-bold">Rp. 2.200.000</p>
+                    <p class="bg-yellow-300 p-1 rounded-full"></p>
+                    <p class="text-xs">Belum dikonfirmasi</p>
+                </div>
+                <div class="flex justify-start gap-4 items-center mt-8">
+                    <img src="https://source.unsplash.com/random/200x200?sig=3" alt="" class="rounded-full w-10 h-10">
+                    <div class="flex-col">
+                        <p class="text-sm font-bold">Jajang<p class="text-xs">Pada Agustus 27 2023</p></p>
+                    </div>
+                    <p class="text-sm font-bold">Rp. 2.200.000</p>
+                    <p class="bg-red-600 p-1 rounded-full"></p>
+                    <p class="text-xs">Tidak dikonfirmasi</p>
+                </div>
+                <div class="flex justify-start gap-4 items-center mt-8">
+                    <img src="https://source.unsplash.com/random/200x200?sig=4" alt="" class="rounded-full w-10 h-10">
+                    <div class="flex-col">
+                        <p class="text-sm font-bold">Wawan<p class="text-xs">Pada Agustus 27 2023</p></p>
+                    </div>
+                    <p class="text-sm font-bold">Rp. 2.200.000</p>
+                    <p class="bg-yellow-300 p-1 rounded-full"></p>
+                    <p class="text-xs">Belum dikonfirmasi</p>
+                </div>
+                <div class="flex justify-start gap-4 items-center mt-8">
+                    <img src="https://source.unsplash.com/random/200x200?sig=5" alt="" class="rounded-full w-10 h-10">
+                    <div class="flex-col">
+                        <p class="text-sm font-bold">Edi<p class="text-xs">Pada Agustus 27 2023</p></p>
+                    </div>
+                    <p class="text-sm font-bold">Rp. 2.200.000</p>
+                    <p class="bg-green-500 p-1 rounded-full"></p>
+                    <p class="text-xs">Dikonfirmasi</p>
+                </div>
+                <div class="flex justify-start gap-4 items-center mt-8">
+                    <img src="https://source.unsplash.com/random/200x200?sig=6" alt="" class="rounded-full w-10 h-10">
+                    <div class="flex-col">
+                        <p class="text-sm font-bold">Imas<p class="text-xs">Pada Agustus 27 2023</p></p>
+                    </div>
+                    <p class="text-sm font-bold">Rp. 2.200.000</p>
+                    <p class="bg-red-600 p-1 rounded-full"></p>
+                    <p class="text-xs">Tidak dikonfirmasi</p>
+                </div>
+            </div>
+
         </div>
     </div>
+  </div>
 
-    <!-- Hero Section End-->
+    <!-- Hero Section End--><!-- Js Start -->
+
+    <script>
+        $('.summernote').summernote({
+          placeholder: 'Ketik Disini',
+          tabsize: 2,
+          height: 100
+        });
+      </script>
+
+    <!-- Js End -->
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+    <script src="../src/file-input.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="../src/chart.js"></script>
+    <script src="../charts-tailwind.js"></script>
 </body>
 </html>
